@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #323232;
+  line-height: 140%;
+}
+
+button {
+  outline: none !important;
+  border: none !important;
+}
+
+/*# sourceMappingURL=styles.css.map */
