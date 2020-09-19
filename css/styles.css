@@ -150,7 +150,7 @@ main .shorten-links-container .results-card {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.05));
   border-radius: 5px;
   padding: 1em;
-  margin: 1em 0;
+  margin: 1em 0 0 0;
 }
 main .shorten-links-container .results-card .url-old {
   font: lighter 16px/120% "B612", sans-serif;
@@ -175,7 +175,7 @@ main .shorten-links-container .results-card .copy-btn {
   border-radius: 0.5rem;
   cursor: pointer;
   padding: 0.5em 1.5em;
-  margin: 0 1em;
+  margin: 0 0 0 1em;
 }
 main .shorten-links-container .results-card .copy-btn.active {
   background-color: #232127;
