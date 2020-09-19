@@ -20,7 +20,7 @@
           </button>
         </div>
         <h4>Shorteny.</h4>
-        <div class = "socials-container">
+        <div class="socials-container">
           <div class="socials">
             <span
               class="iconify"
@@ -50,25 +50,32 @@
     </header>
     <main>
       <div>
-        <h2>More than just shorter links</h2>
-        <p>Create short and memorable links in few seconds.</p>
+        <h2>
+          More than just<br />
+          shorter links
+        </h2>
+        <h6>Create short and memorable links in few seconds.</h6>
       </div>
-      <div>
-        <form action="#" class="url-form">
-          <input
-            type="text"
-            id="url-form-input"
-            placeholder="add the link here..."
-          />
-          <button class="url-form-button" type="submit">Shorten it!</button>
-        </form>
-        <div class="validation-message">Please add a link</div>
-      </div>
-      <div class="results">
-          <p class="url-provided">www.linkedin.com/url/myname/profile</p>
-          <p class="url-shortened">https://rel.ink/24nfd</p>
-          <button class="copy" id="copy">Copy</button>
-      </div>
+      <section class="shorten-links-container">
+        <div class="form-background">
+          <form action="#" class="shorten-links-form">
+            <input
+              type="text"
+              id="shorten-links-input"
+              placeholder="add the link here..."
+            />
+            <button class="shorten-links-btn" type="submit">Shorten it!</button>
+          </form>
+          <div class="shorten-links-error">please add a link</div>
+        </div>
+        <div class="results-card">
+          <p class="url-old">www.shortly.com/shortner/url/website</p>
+          <div class="url-new">
+            <p id="url-copied">https://rel.ink/24nfd</p>
+            <button class="copy-btn" id="copy-btn">Copy</button>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
   </body>

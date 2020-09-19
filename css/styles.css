@@ -1,1 +1,185 @@
-@import url("https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,700&display=swap");@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap");*,*::before,*::after{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;outline:none}body{background-color:#f9f9f9;color:#323232;line-height:140%}button{outline:none !important;border:none !important}nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:1em}nav .menu-toggler{background-color:#f9f9f9}nav h4{font:bold 24px/120% "Dosis",sans-serif;letter-spacing:1.5px}nav .socials-container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}nav .socials{background-color:#ceb8aa;padding:5px;margin-left:10px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-radius:5px}main{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main h2{font:bold 48px/120% "B612",sans-serif;color:#323232}main p,main button,main .validation-message{font-family:"Dosis",sans-serif;letter-spacing:0.5px;color:#323232;text-align:center}
+@import url("https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #323232;
+  line-height: 140%;
+}
+
+button {
+  outline: none !important;
+  border: none !important;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+}
+nav .menu-toggler {
+  background-color: #f9f9f9;
+}
+nav h4 {
+  font: bold 24px/120% "Dosis", sans-serif;
+  letter-spacing: 1.5px;
+}
+nav .socials-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav .socials {
+  background-color: #ceb8aa;
+  padding: 5px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
+}
+main h2 {
+  font: bold 48px/120% "B612", sans-serif;
+  color: #323232;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin: 0;
+}
+main h6 {
+  font: 300 24px/140% "B612", sans-serif;
+  color: #323232;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 1em 0;
+  margin: 0;
+}
+main p,
+main button,
+main .shorten-links-error {
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 0.06em;
+  color: #323232;
+  text-align: center;
+}
+main .shorten-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .shorten-links-container .form-background {
+  background-color: #935c87;
+  border-radius: 5px;
+  height: 5em;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .shorten-links-container .form-background form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .shorten-links-container .form-background form input {
+  display: flex;
+  width: 350px;
+  margin-right: 20px;
+  padding: 0.5em 0.5em;
+  border-radius: 5px;
+  font: lighter 18px/120% "B612", sans-serif;
+  border: 2px solid #f9f9f9;
+  background-color: #f9f9f9;
+  color: #323232;
+}
+main .shorten-links-container .form-background form input::placeholder {
+  color: rgba(50, 50, 50, 0.69);
+  font: normal 18px/120% "Dosis", sans-serif;
+  letter-spacing: 0.06em;
+}
+main .shorten-links-container .form-background form input:focus {
+  border: 2px solid #f46262;
+  border-radius: 5px;
+}
+main .shorten-links-container .form-background form button {
+  display: flex;
+  color: #f9f9f9;
+  font: bolder 18px/120% "B612", sans-serif;
+  letter-spacing: 0.06em;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 5px;
+  background-color: #ceb8aa;
+  text-align: center;
+  cursor: pointer;
+}
+main .shorten-links-container .form-background .shorten-links-error {
+  color: #f46262;
+  font-style: italic;
+  display: none;
+}
+main .shorten-links-container .form-background .shorten-links-error.show {
+  display: block;
+}
+main .shorten-links-container .results-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfdfd;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.05));
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+}
+main .shorten-links-container .results-card .url-old {
+  font: lighter 16px/120% "B612", sans-serif;
+  color: #323232;
+  margin-right: 1em;
+}
+main .shorten-links-container .results-card .url-new {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .shorten-links-container .results-card .url-new p {
+  font: bolder 16px/120% "B612", sans-serif;
+  color: #935c87;
+}
+main .shorten-links-container .results-card .copy-btn {
+  font: bolder 16px/120% "B612", sans-serif;
+  border: none;
+  background-color: #ceb8aa;
+  color: #f9f9f9;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.5em 1.5em;
+  margin: 0 1em;
+}
+main .shorten-links-container .results-card .copy-btn.active {
+  background-color: #232127;
+  border: 1px solid #232127;
+}
+
+/*# sourceMappingURL=styles.css.map */
