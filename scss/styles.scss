@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap");
 
 *,
 *::before,
@@ -24,6 +24,61 @@ body {
 }
 
 button {
-    outline: none !important;
-    border: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+
+  .menu-toggler {
+    background-color: $light-grey;
+  }
+
+  h4 {
+    font: bold 24px/120% $font-dosis;
+    letter-spacing: 1.5px;
+  }
+
+  .socials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // background-color: salmon;
+  }
+
+  .socials {
+    background-color: $primary-color;
+    padding: 5px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font: bold 48px/120% $font-b612;
+    color: $text-color;
+  }
+
+  p,
+  button,
+  .validation-message {
+    font-family: $font-dosis;
+    letter-spacing: 0.5px;
+    color: $text-color;
+    text-align: center;
+  }
 }
