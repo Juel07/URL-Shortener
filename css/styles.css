@@ -24,7 +24,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1em;
+  padding: 1em 2em;
 }
 nav .menu-toggler {
   background-color: #f9f9f9;
@@ -47,6 +47,9 @@ nav .socials {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+}
+nav .socials:hover {
+  transform: translateY(-3px);
 }
 
 main {
@@ -88,22 +91,20 @@ main .shorten-links-container {
 main .shorten-links-container .form-background {
   background-color: #935c87;
   border-radius: 5px;
-  height: 5em;
-  padding: 20px;
+  padding: 1.5em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
 }
 main .shorten-links-container .form-background form {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 main .shorten-links-container .form-background form input {
   display: flex;
-  width: 350px;
   margin-right: 20px;
   padding: 0.5em 0.5em;
   border-radius: 5px;
@@ -118,7 +119,7 @@ main .shorten-links-container .form-background form input::placeholder {
   letter-spacing: 0.06em;
 }
 main .shorten-links-container .form-background form input:focus {
-  border: 2px solid #f46262;
+  border: 2px solid #f78282;
   border-radius: 5px;
 }
 main .shorten-links-container .form-background form button {
@@ -133,13 +134,14 @@ main .shorten-links-container .form-background form button {
   text-align: center;
   cursor: pointer;
 }
+main .shorten-links-container .form-background form button:hover {
+  transform: translateY(-2px);
+}
 main .shorten-links-container .form-background .shorten-links-error {
-  color: #f46262;
+  color: #f78282;
   font-style: italic;
   display: none;
-}
-main .shorten-links-container .form-background .shorten-links-error.show {
-  display: block;
+  justify-content: start;
 }
 main .shorten-links-container .results-card {
   display: flex;
@@ -177,9 +179,112 @@ main .shorten-links-container .results-card .copy-btn {
   padding: 0.5em 1.5em;
   margin: 0 0 0 1em;
 }
-main .shorten-links-container .results-card .copy-btn.active {
-  background-color: #232127;
-  border: 1px solid #232127;
+main .shorten-links-container .results-card .copy-btn:hover {
+  transform: translateY(-2px);
+}
+main .shorten-links-container .results-card .copy-btn:active {
+  background-color: #935c87;
+  border: 1px solid #935c87;
+}
+
+@media only screen and (max-width: 426px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em;
+  }
+  nav .menu-toggler {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+  }
+  nav h4 {
+    font: bold 20px/120% "Dosis", sans-serif;
+    letter-spacing: 1.5px;
+  }
+
+  main {
+    padding: 5em 1em;
+  }
+  main h2 {
+    font: bold 39px/120% "B612", sans-serif;
+  }
+  main h6 {
+    font: 300 20px/140% "B612", sans-serif;
+  }
+  main .shorten-links-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  main .shorten-links-container .form-background {
+    width: 90%;
+    padding: 1em;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .shorten-links-container .form-background form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  main .shorten-links-container .form-background form input {
+    margin-right: 0;
+    padding: 0.5em 0.5em;
+    font: lighter 16px/120% "B612", sans-serif;
+    width: 100%;
+  }
+  main .shorten-links-container .form-background form input::placeholder {
+    color: rgba(50, 50, 50, 0.69);
+    font: normal 14px/120% "Dosis", sans-serif;
+    letter-spacing: 0.06em;
+  }
+  main .shorten-links-container .form-background form input:focus {
+    border: 2px solid #f78282;
+    border-radius: 5px;
+  }
+  main .shorten-links-container .form-background form button {
+    justify-content: center;
+    font: bolder 16px/120% "B612", sans-serif;
+    margin: 1em 0 0 0;
+    padding: 0.5em 0;
+    width: 100%;
+  }
+  main .shorten-links-container .results-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 1em 0;
+  }
+  main .shorten-links-container .results-card .url-old {
+    font: lighter 14px/120% "B612", sans-serif;
+    color: #323232;
+    margin-right: 0;
+  }
+  main .shorten-links-container .results-card .url-new {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5em;
+  }
+  main .shorten-links-container .results-card .url-new p {
+    font: bolder 14px/120% "B612", sans-serif;
+  }
+  main .shorten-links-container .results-card .copy-btn {
+    font: bolder 14px/120% "B612", sans-serif;
+    padding: 0.5em 1.5em;
+    margin: 1em 0 0 0;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
