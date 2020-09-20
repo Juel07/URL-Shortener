@@ -36,9 +36,9 @@ nav {
   justify-content: space-between;
   padding: 1em 2em;
 
-  .menu-toggler {
-    background-color: $light-grey;
-  }
+  // .menu-toggler {
+  //   background-color: $light-grey;
+  // }
 
   h4 {
     font: bold 24px/120% $font-dosis;
@@ -235,13 +235,13 @@ main {
     align-items: center;
     padding: 1em 1em;
 
-    .menu-toggler {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      background-color: $light-grey;
-    }
+    // .menu-toggler {
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: center;
+    //   align-items: center;
+    //   background-color: $light-grey;
+    // }
 
     h4 {
       font: bold 20px/120% $font-dosis;
