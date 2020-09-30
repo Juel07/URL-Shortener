@@ -1,4 +1,4 @@
-### Shorteny : URL-Shortener-website
+### Shorteny : URL-Shortener-website (work in progress)
 A landing page integrated with the [rel.ink](https://rel.ink) API that shortens URLs. Challenge idea from [Frontend Mentor](https://www.frontendmentor.io)
 
 ### To view
@@ -10,7 +10,6 @@ See live website here:
 - HTML
 - CSS / SASS
 - JavaScript
-- APIs
 
 ### Authors
 - Juel B
