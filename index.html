@@ -1,91 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shorteny | URL shortening API Challenge</title>
-    <link href="css/styles.css" type="text/css" rel="stylesheet" />
+    <title>Shorteny</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <nav>
-        <h4>Shorteny.</h4>
-        
-        <!-- socials -->
-        
-        <div class="socials-container">
-          <a href="#">
-            <div class="socials">
-              <span
-                class="iconify"
-                data-inline="false"
-                data-icon="teenyicons:github-solid"
-                style="color: #ffffff; font-size: 16px"
-              ></span>
-            </div>
-          </a>
-          <a href="#">
-            <div class="socials">
-              <span
-                class="iconify"
-                data-inline="false"
-                data-icon="bx:bxl-instagram"
-                style="color: #ffffff; font-size: 16px"
-              ></span>
-            </div>
-          </a>
-          <a href="#">
-            <div class="socials">
-              <span
-                class="iconify"
-                data-inline="false"
-                data-icon="simple-icons:ko-fi"
-                style="color: #ffffff; font-size: 16px"
-              ></span>
-            </div>
-          </a>
-        </div>
-      </nav>
-    </header>
-    
-    <!-- landing page  -->
+    <h1>Shorteny</h1>
+    <p>Create short and memorable links in few seconds.</p>
 
-    <main>
-      <div>
-        <h2>
-          More than just<br />
-          shorter links
-        </h2>
-        <h6>Create short and memorable links in few seconds.</h6>
+    <div class="wrapper">
+      <div class="form">
+        <form>
+            <label for="search">Enter your URL* : </label>
+            <input type="text" id="search" class="search" placeholder="add the link here..." required />
+            <div class="error">please add a link</div>
+            <button class="submit">Shorten it!</button>
+        </form>
       </div>
-      <section class="shorten-links-container">
-        <div class="form-background">
-          <form action="#" class="shorten-links-form">
-            <input
-              type="text"
-              id="shorten-links-input"
-              placeholder="add the link here..."
-            />
-            <button class="shorten-links-btn" type="submit">Shorten it!</button>
-          </form>
-          <div class="shorten-links-error">please add a link</div>
-        </div>
-        <div class="results-card">
-          <p class="url-old">www.website.com/careers/jobs/united-states/</p>
-          <div class="url-new">
-            <p id="url-copied">https://rel.ink/24nfd</p>
+
+      <div class="result">
+
+        <section>
+            <p id="url-copied">https://bit.ly/2PBFfi0</p>
             <button class="copy-btn" id="copy-btn">Copy</button>
-          </div>
-        </div>
-        <!-- <div class="results-card">
-          <p class="url-old">...</p>
-          <div class="url-new">
-            <p id="url-copied"></p>
-            <button class="copy-btn" id="copy-btn">Copy</button>
-          </div>
-        </div> -->
-      </section>
-    </main>
-    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+        </section>
+        
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
