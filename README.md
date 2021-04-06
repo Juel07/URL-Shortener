@@ -1,12 +1,12 @@
-### Shorteny : URL-Shortener-website (work in progress)
-<!-- A landing page integrated with the [rel.ink](https://rel.ink) API that shortens URLs. Challenge idea from [Frontend Mentor](https://www.frontendmentor.io) -->
+### General info 
 
-A landing page integrated with the [Bitly](https://dev.bitly.com/) API that shortens URLs.
+(work in progress)
+
+Shorteny: a landing page integrated with the [ShrtCode](https://app.shrtco.de/docs) API that shortens URLs.
 
 ### To view
 See live website here: 
 - https://juel07.github.io/URL-Shortener/
-- https://safiyaj.github.io/URL-Shortener/
 
 ### Technologies
 - HTML
@@ -15,6 +15,5 @@ See live website here:
 
 ### Authors
 - Juel B
-- Safiya J
 
 
