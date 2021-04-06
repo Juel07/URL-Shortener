@@ -1,3 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
 
+body {
+  background-color: #f9f9f9;
+  color: #323232;
+  line-height: 140%;
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  padding-top: 2em;
+}
+body .wrapper {
+  margin: 0 auto;
+}
+body h1 {
+  font: bold 24px/120% Georgia, serif;
+}
+body h2 {
+  font-size: 20px;
+}
+body h6 {
+  font-size: 18px;
+}
+body input[type=text] {
+  height: 2.2em;
+  width: 300px;
+  font-size: 1em;
+  max-width: 100%;
+  padding: 10px;
+  color: #323232;
+  border: 2px solid #323232;
+  border-radius: 5px;
+  outline: none;
+}
+body input[type=text]::placeholder {
+  color: #323232;
+  font-size: 15px;
+}
+body .form,
+body .result {
+  padding: 2em;
+}
+body button {
+  outline: none !important;
+  border: none !important;
+  text-align: center;
+  background-color: #935c87;
+  color: #fdfdfd;
+  padding: 9px 15px;
+  outline: none;
+  border: 2px solid #353131;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+}
+body button:hover {
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 426px) {
+  .form,
+.result {
+    padding: 1em;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

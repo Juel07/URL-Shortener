@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+$font-dosis: "Dosis", sans-serif;
+$light-grey: #f9f9f9;
+$white: #fdfdfd;
+$focus-color: hsl(0, 88%, 74%);
+$primary-color: #ceb8aa;
+$secondary-color: #935c87;
+$text-color: #323232;
+body {
+  background-color: $light-grey;
+  color: $text-color;
+  line-height: 140%;
+  font-family: $font-dosis;
+  text-align: center;
+  padding-top: 2em;
+
+  .wrapper {
+    margin: 0 auto;
+  }
+  h1 {
+    font: bold 24px/120% Georgia, serif;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+  input[type="text"] {
+    height: 2.2em;
+    width: 300px;
+    font-size: 1em;
+    max-width: 100%;
+    padding: 10px;
+    color: $text-color;
+    border: 2px solid $text-color;
+    border-radius: 5px;
+    outline: none;
+
+    &::placeholder {
+      color: $text-color;
+      font-size: 15px;
+    }
+  }
+  .form,
+  .result {
+    padding: 2em;
+  }
+  button {
+    outline: none !important;
+    border: none !important;
+    text-align: center;
+    background-color: $secondary-color;
+    color: $white;
+    padding: 9px 15px;
+    // margin: 1em 0 0 0;
+    outline: none;
+    border: 2px solid #353131;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      transform: scale(0.95);
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .form,
+  .result {
+    padding: 1em;
+  }
+}
