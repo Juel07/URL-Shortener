@@ -12,7 +12,7 @@ body {
   background-color: #f9f9f9;
   color: #323232;
   line-height: 140%;
-  font-family: "Dosis", sans-serif;
+  font: normal 18px/120% "Dosis", sans-serif;
   text-align: center;
   padding-top: 2em;
 }
@@ -22,28 +22,34 @@ body .wrapper {
 body h1 {
   font: bold 24px/120% Georgia, serif;
 }
-body h2 {
-  font-size: 20px;
-}
-body h6 {
-  font-size: 18px;
-}
 body input[type=text] {
   height: 2.2em;
   width: 300px;
-  font-size: 1em;
   max-width: 100%;
+  font: normal 16px/120% "Dosis", sans-serif;
   padding: 10px;
   color: #323232;
   border: 2px solid #323232;
   border-radius: 5px;
   outline: none;
+  margin: 0 1em;
 }
 body input[type=text]::placeholder {
   color: #323232;
   font-size: 15px;
 }
-body .form,
+body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body form,
 body .result {
   padding: 2em;
 }
@@ -53,7 +59,8 @@ body button {
   text-align: center;
   background-color: #935c87;
   color: #fdfdfd;
-  padding: 9px 15px;
+  height: 35px;
+  width: 100px;
   outline: none;
   border: 2px solid #353131;
   border-radius: 5px;
@@ -63,9 +70,58 @@ body button:hover {
   transform: scale(0.95);
   cursor: pointer;
 }
+body .result {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  overflow-x: hidden;
+}
+body .result .response {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+  font-size: 16px;
+  border: 2px solid #935c87;
+  border-radius: 5px;
+  transition: transform 600ms ease-in-out;
+}
+body .result .response .long-link {
+  color: #888888;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+body .result .response .row-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+}
+body .result .response .row-right .short-link {
+  padding: 0 1em;
+}
+body .result .clearfix {
+  clear: both;
+}
 
 @media only screen and (max-width: 426px) {
-  .form,
+  form,
 .result {
     padding: 1em;
   }

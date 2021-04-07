@@ -19,7 +19,7 @@ body {
   background-color: $light-grey;
   color: $text-color;
   line-height: 140%;
-  font-family: $font-dosis;
+  font: normal 18px/120% $font-dosis;
   text-align: center;
   padding-top: 2em;
 
@@ -29,29 +29,35 @@ body {
   h1 {
     font: bold 24px/120% Georgia, serif;
   }
-  h2 {
-    font-size: 20px;
-  }
-  h6 {
-    font-size: 18px;
-  }
   input[type="text"] {
     height: 2.2em;
     width: 300px;
-    font-size: 1em;
     max-width: 100%;
+    font: normal 16px/120% $font-dosis;
     padding: 10px;
     color: $text-color;
     border: 2px solid $text-color;
     border-radius: 5px;
     outline: none;
+    margin: 0 1em;
 
     &::placeholder {
       color: $text-color;
       font-size: 15px;
     }
   }
-  .form,
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  form,
   .result {
     padding: 2em;
   }
@@ -61,8 +67,8 @@ body {
     text-align: center;
     background-color: $secondary-color;
     color: $white;
-    padding: 9px 15px;
-    // margin: 1em 0 0 0;
+    height: 35px;
+    width: 100px;
     outline: none;
     border: 2px solid #353131;
     border-radius: 5px;
@@ -73,10 +79,65 @@ body {
       cursor: pointer;
     }
   }
+  .result {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    overflow-x: hidden;
+
+    .response {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      width: 100%;
+      font-size: 16px;
+      border: 2px solid $secondary-color;
+      border-radius: 5px;
+      transition: transform 600ms ease-in-out;
+
+      .long-link {
+        color: #888888;
+        overflow: hidden;
+        word-wrap: break-word;
+        white-space: pre;
+        text-overflow: ellipsis;
+      }
+
+      .row-right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        align-items: center;
+
+        .short-link {
+          padding: 0 1em;
+        }
+      }
+    }
+
+    .clearfix {
+      clear: both;
+    }
+  }
+
 }
 
 @media only screen and (max-width: 426px) {
-  .form,
+  form,
   .result {
     padding: 1em;
   }
