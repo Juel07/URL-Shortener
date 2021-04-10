@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+$font-b612: "B612", sans-serif;
+$font-dosis: "Dosis", sans-serif;
+$light-grey: #f9f9f9;
+$white: #fdfdfd;
+$focus-color: hsl(0, 88%, 74%);
+$primary-color: #ceb8aa;
+$secondary-color: #935c87;
+$text-color: #323232;
+
+body {
+  background-color: $light-grey;
+  color: $text-color;
+  line-height: 140%;
+}
+
+button {
+  outline: none !important;
+  border: none !important;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 2em;
+
+  // .menu-toggler {
+  //   background-color: $light-grey;
+  // }
+
+  h4 {
+    font: bold 24px/120% $font-dosis;
+    letter-spacing: 1.5px;
+  }
+
+  .socials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // background-color: salmon;
+  }
+
+  .socials {
+    background-color: $primary-color;
+    padding: 5px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
+
+  h2 {
+    font: bold 48px/120% $font-b612;
+    color: $text-color;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin: 0;
+  }
+
+  h6 {
+    font: 300 24px/140% $font-b612;
+    color: $text-color;
+    letter-spacing: 0.06em;
+    text-align: center;
+    padding: 1em 0;
+    margin: 0;
+  }
+
+  p,
+  button,
+  .shorten-links-error {
+    font-family: $font-dosis;
+    letter-spacing: 0.06em;
+    color: $text-color;
+    text-align: center;
+  }
+
+  .container {
+    // @include respond(desktop) {
+    //   width: 100%;
+    // }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-background {
+      background-color: $secondary-color;
+      border-radius: 5px;
+      padding: 1.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      & form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        // background-color: $text-color;
+
+        & input {
+          display: flex;
+          margin-right: 20px;
+          padding: 0.5em 0.5em;
+          border-radius: 5px;
+          font: lighter 18px/120% $font-b612;
+          border: 2px solid $light-grey;
+          background-color: $light-grey;
+          color: $text-color;
+
+          &::placeholder {
+            color: rgba(50, 50, 50, 0.69);
+            font: normal 18px/120% $font-dosis;
+            letter-spacing: 0.06em;
+          }
+
+          &:focus {
+            border: 2px solid $focus-color;
+            border-radius: 5px;
+          }
+        }
+
+        & button {
+          display: flex;
+          color: $light-grey;
+          font: bolder 18px/120% $font-b612;
+          letter-spacing: 0.06em;
+          // min-width: 120px;
+          padding: 0.5em 1.5em;
+          border: none;
+          border-radius: 5px;
+          background-color: $primary-color;
+          text-align: center;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(-2px);
+          }
+        }
+      }
+
+      .shorten-links-error {
+        color: $focus-color;
+        font-style: italic;
+        display: none;
+        justify-content: start;
+      }
+    }
+
+    .results-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: $white;
+      filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.05));
+      border-radius: 5px;
+      padding: 1em;
+      margin: 1em 0 0 0;
+
+      & .url-old {
+        font: lighter 16px/120% $font-b612;
+        color: $text-color;
+        margin-right: 1em;
+      }
+
+      & .url-new {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        & p {
+          font: bolder 16px/120% $font-b612;
+          color: $secondary-color;
+        }
+      }
+
+      & .copy-btn {
+        font: bolder 16px/120% $font-b612;
+        border: none;
+        background-color: $primary-color;
+        color: $light-grey;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        padding: 0.5em 1.5em;
+        margin: 0 0 0 1em;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          background-color: $secondary-color;
+          border: 1px solid $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em;
+
+    h4 {
+      font: bold 20px/120% $font-dosis;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  main {
+    padding: 5em 1em;
+
+    h2 {
+      font: bold 39px/120% $font-b612;
+    }
+
+    h6 {
+      font: 300 20px/140% $font-b612;
+    }
+
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .form-background {
+        width: 90%;
+        padding: 1em;
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+
+        & form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          justify-content: center;
+
+          & input {
+            margin-right: 0;
+            padding: 0.5em 0.5em;
+            font: lighter 16px/120% $font-b612;
+            width: 100%;
+
+            &::placeholder {
+              color: rgba(50, 50, 50, 0.69);
+              font: normal 14px/120% $font-dosis;
+              letter-spacing: 0.06em;
+            }
+
+            &:focus {
+              border: 2px solid $focus-color;
+              border-radius: 5px;
+            }
+          }
+
+          & button {
+            justify-content: center;
+            font: bolder 16px/120% $font-b612;
+            margin: 1em 0 0 0;
+            padding: 0.5em 0;
+            width: 100%;
+          }
+        }
+      }
+
+      .results-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        margin: 1em 0;
+        // width: 95%;
+
+        & .url-old {
+          font: lighter 14px/120% $font-b612;
+          color: $text-color;
+          margin-right: 0;
+        }
+
+        & .url-new {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 0.5em;
+          // background-color: salmon;
+
+          & p {
+            font: bolder 14px/120% $font-b612;
+          }
+        }
+
+        & .copy-btn {
+          font: bolder 14px/120% $font-b612;
+          padding: 0.5em 1.5em;
+          margin: 1em 0 0 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
