@@ -8,6 +8,10 @@ Shorteny: a landing page integrated with the [ShrtCode](https://app.shrtco.de/do
 See live website here: 
 - https://juel07.github.io/URL-Shortener/
 
+### Demo 
+
+<img src="url-converter.gif" width="500px"/>
+
 ### Technologies
 - HTML
 - CSS / SASS
